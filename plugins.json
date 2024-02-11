@@ -1,12 +1,4 @@
 [
-  {
-    "id": "example-plugin",
-    "name": "Example Plugin",
-    "manifest_url": "https://tarrasqueapp.github.io/example-plugin/manifest.json"
-  },
-  {
-    "id": "dnd5e-plugin",
-    "name": "Dungeons & Dragons 5th Edition Plugin",
-    "manifest_url": "https://tarrasqueapp.github.io/dnd5e-plugin/manifest.json"
-  }
+  "https://tarrasqueapp.github.io/dnd5e/manifest.json",
+  "https://tarrasqueapp.github.io/example-plugin/manifest.json"
 ]
