@@ -15,27 +15,46 @@ To have your plugin listed on the app, please submit a pull request. The pull re
 
 ### Creating a manifest file
 
-Your manifest file should be hosted on a public URL and should be a JSON file with the following properties:
-
-| Property       | Description                                             |
-| -------------- | ------------------------------------------------------- |
-| `name`         | The title of the plugin                                 |
-| `description`  | A short description of the plugin                       |
-| `author`       | The name of the plugin's author                         |
-| `icon_url`     | The image file that will be used as the plugin's icon   |
-| `plugin_url`   | The URL that will be used to load the plugin in the app |
-| `homepage_url` | The URL of the plugin's repository or documentation     |
-
-These properties will be used to display information about your plugin in the app. Here is an example of a manifest file for the [dnd5e](https://github.com/tarrasqueapp/dnd5e) plugin:
+Your plugin's manifest file should be hosted on a public URL, as it is responsible for instructing the app what to display and where. Here is an example of a manifest file for the [dnd5e](https://github.com/tarrasqueapp/dnd5e) plugin:
 
 ```json
 {
+  // A unique identifier for the plugin (usually in the format `username/repo`)
+  "id": "tarrasqueapp/dnd5e",
+  // The title of the plugin
   "name": "Dungeons & Dragons 5th Edition",
+  // A short description of the plugin
   "description": "A plugin for the Dungeons & Dragons 5th Edition ruleset",
+  // The name of the plugin's author
   "author": "Tarrasque App",
-  "icon_url": "https://tarrasqueapp.github.io/dnd5e/icon.svg",
-  "plugin_url": "https://tarrasqueapp.github.io/dnd5e",
-  "homepage_url": "https://github.com/tarrasqueapp/dnd5e"
+  // An array of URLs where the plugin's files can be accessed
+  "urls": [
+    // The image file that will be used as the plugin's icon (at least 32x32 pixels)
+    {
+      "name": "icon",
+      "url": "https://dnd5e.tarrasque.app/icon.svg"
+    },
+    // The URL that will be used to load the plugin in the map overlay
+    // Optional, only needed if the plugin displays a map overlay (e.g. dice roller, character sheet, etc.)
+    {
+      "name": "map_iframe",
+      "url": "https://dnd5e.tarrasque.app/overlay",
+      // The width and height of the iframe where the plugin will be shown
+      "width": 300,
+      "height": 300
+    },
+    // The URL that will be used to load the plugin in the compendium
+    // Optional, only needed if the plugin has compendium data (e.g. spells, monsters, abilities, etc.)
+    {
+      "name": "compendium_iframe",
+      "url": "https://dnd5e.tarrasque.app/compendium"
+    },
+    // The URL of the plugin's repository or documentation for more information (optional)
+    {
+      "name": "homepage",
+      "url": "https://github.com/tarrasqueapp/dnd5e"
+    }
+  ]
 }
 ```
 
