@@ -15,48 +15,7 @@ To have your plugin listed on the app, please submit a pull request. The pull re
 
 ### Creating a manifest file
 
-Your plugin's manifest file should be hosted on a public URL, as it is responsible for instructing the app what to display and where. Here is an example of a manifest file for the [dnd5e](https://github.com/tarrasqueapp/dnd5e) plugin:
-
-```json
-{
-  // A unique identifier for the plugin (usually in the format `username/repo`)
-  "id": "tarrasqueapp/dnd5e",
-  // The title of the plugin
-  "name": "Dungeons & Dragons 5th Edition",
-  // A short description of the plugin
-  "description": "A plugin for the Dungeons & Dragons 5th Edition ruleset",
-  // The name of the plugin's author
-  "author": "Tarrasque App",
-  // An array of URLs where the plugin's files can be accessed
-  "urls": [
-    // The image file that will be used as the plugin's icon (at least 32x32 pixels)
-    {
-      "name": "icon",
-      "url": "https://dnd5e.tarrasque.app/icon.svg"
-    },
-    // The URL that will be used to load the plugin in the map overlay
-    // Optional, only needed if the plugin displays a map overlay (e.g. dice roller, character sheet, etc.)
-    {
-      "name": "map_iframe",
-      "url": "https://dnd5e.tarrasque.app/overlay",
-      // The width and height of the iframe where the plugin will be shown
-      "width": 300,
-      "height": 300
-    },
-    // The URL that will be used to load the plugin in the compendium
-    // Optional, only needed if the plugin has compendium data (e.g. spells, monsters, abilities, etc.)
-    {
-      "name": "compendium_iframe",
-      "url": "https://dnd5e.tarrasque.app/compendium"
-    },
-    // The URL of the plugin's repository or documentation for more information (optional)
-    {
-      "name": "homepage",
-      "url": "https://github.com/tarrasqueapp/dnd5e"
-    }
-  ]
-}
-```
+Your plugin's manifest file should be hosted on a public URL, as it is responsible for instructing the app what to display and where. You can find an up-to-date example of a manifest file on the [SDK repository](https://github.com/tarrasqueapp/sdk).
 
 ## Updating a plugin
 
